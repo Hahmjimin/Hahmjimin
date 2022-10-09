@@ -51,7 +51,7 @@ function App() {
         <Button size="large" color="pink" fullWidth>
           BUTTON
         </Button>
-      </div>
+      </div> 
     </div>
   );
 }
