@@ -9,11 +9,15 @@ import logo from "../static/assets/logo.png";
 function Nav() {
   return (
     <Block>
-      <LogoImg src={logo}></LogoImg>
-      <NavBtn1>공지사항</NavBtn1>
-      <NavBtn2>문의사항</NavBtn2>
-      <NavBtn3>프로젝트</NavBtn3>
-      <LoginBtn>로그인</LoginBtn>
+      <Inner>
+        <LogoImg src={logo}></LogoImg>
+        <BtnContainer>
+          <NavBtn>공지사항</NavBtn>
+          <NavBtn>문의사항</NavBtn>
+          <NavBtn>프로젝트</NavBtn>
+          <LoginBtn>로그인</LoginBtn>
+        </BtnContainer>
+      </Inner>
     </Block>
   );
 }
@@ -31,77 +35,30 @@ const Block = styled.div`
   z-index: 100;
 `;
 
+const Inner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  height: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+`;
+
 const LogoImg = styled.img`
-  width: 130px;
+  width: 140px;
   height: 30px;
-  margin: 15px;
-  margin-left: 25px;
   &:hover {
     cursor: pointer;
   }
 `;
-const NavBtn1 = styled.button`
-  position: relative;
-  top: -23px;
-  left: 930px;
-  height: 40px;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background-color: transparent;
-  border: 0px;
-  outline: opx;
-  &:hover {
-    consur: pointer;
-    color: #785ffa;
-  }
-  &:after {
-    display: block;
-    content: "";
-    border-bottom: solid 3px #785ffa;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
-  }
+
+const BtnContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
-const NavBtn2 = styled.button`
-  position: relative;
-  top: -23px;
-  left: 940px;
-  height: 40px;
-  width: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background-color: transparent;
-  border: 0px;
-  outline: opx;
-  &:hover {
-    consur: pointer;
-    color: #785ffa;
-  }
-  &:after {
-    display: block;
-    content: "";
-    border-bottom: solid 3px #785ffa;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
-  }
-`;
-
-const NavBtn3 = styled.button`
-  position: relative;
-  top: -23px;
-  left: 950px;
-  height: 40px;
-  width: 80px;
+const NavBtn = styled.button`
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -125,19 +82,15 @@ const NavBtn3 = styled.button`
 `;
 
 const LoginBtn = styled.button`
-  position: relative;
-  top: -23px;
-  left: 970px;
-  height: 30px;
-  width: 80px;
-  text-align: center;
-  line-height: 31px;
   background-color: #785ffa;
   border-radius: 5px;
   border: 0px;
   outline: opx;
   font-size: 16px;
   font-weight: 600;
+  padding: 6px 18px;
+  margin-left: 40px;
+  transition: background-color 0.2s;
   &:hover {
     background-color: white;
     color: black;
