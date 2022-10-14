@@ -10,7 +10,7 @@ class Main extends Component {
           <Header />
         </div>
         <div>
-            <img src="./img/main_bg.png"></img>
+            <div className="img"></div>
             <h2>음악, <br></br>함께할 누군가가 필요할 때</h2>
         </div>
       </div>
