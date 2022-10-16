@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 ✨Front-end Developer
-
+//
 🌱 Interest & Skills
 - React-lib, Redux-state
 - Javascript-language 
