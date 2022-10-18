@@ -31,8 +31,8 @@ function Main() {
           <ReactPlayer
             className="player"
             url={"https://youtu.be/trE4htAzay8"}
-            width="560px"
-            heigth="315px"
+            width={"570px"} 
+            height={"320px"}
             playing={false}
             muted={true}
             controls={true}
@@ -46,18 +46,32 @@ function Main() {
       </div>
       <div>
         <Grid>
-          <Item>
+          <FirstItem>
             <Number>01</Number>
-            <Intro>다른 뮤지션과 함께 경험하는 음악 협업</Intro>
-          </Item>
-          <Item>
+            <Intro>다른 뮤지션과 함께 경험하는<br></br>음악 협업</Intro>
+            <ParagraphText>
+              나와 맞는 뮤지션을 매칭하여 팀을 이룰 수 있습니다.<br></br>팀을 이룬 후
+              협업을 통해 버스킹, 뮤직 mt<br></br>그리고 최종 공연까지 참가 기간 동안
+              <br></br>다양한 음악 활동을 경험할 수 있습니다.
+            </ParagraphText>
+          </FirstItem>
+          <SecondItem>
             <Number>02</Number>
-            <Intro>음악활동을 도와주는 든든한 멘토진</Intro>
-          </Item>
-          <Item>
+            <Intro>음악활동을 도와주는<br></br>든든한 멘토진</Intro>
+            <ParagraphText>
+              맞춤 멘토링부터 공연 음악 편곡, 믹싱까지<br></br>음악전문학원에서 제공하는
+              연습실에서<br></br>소속 멘토 선생님들과 함께 멘토링을 진행하며<br></br>팀이 원하는
+              음악을 만들 수 있도록 도와줍니다.
+            </ParagraphText>
+          </SecondItem>
+          <ThirdItem>
             <Number>03</Number>
-            <Intro>잊지 못할 추억을 간직할 수 있는 굿즈까지</Intro>
-          </Item>
+            <Intro>잊지 못할 추억을<br></br>간직할 수 있는 굿즈까지</Intro>
+            <ParagraphText>
+              녹음한 공연 곡과 공연 영상을 함께 편집한<br></br>영상 앨범부터 뮤커톤 참가
+              기념 굿즈까지<br></br>뮤커톤을 통해 만난 값진 추억을 선물로 드립니다.
+            </ParagraphText>
+          </ThirdItem>
         </Grid>
       </div>
     </div>
@@ -117,7 +131,7 @@ const Paragraph = styled.div`
 const Video = styled.div`
   float: right;
   padding-right: 250px;
-  margin-top: -300px;
+  margin-top: -270px;
 `;
 
 const Benefit = styled.div`
@@ -141,16 +155,41 @@ const FirstText = styled.div`
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 50px 50px 50px;
-  grid-template-rows: 50px 50px;
-  grid-gap: 5px;
+display: grid;
+padding-top: 10%;
+padding-left: 15%;
+grid-template-columns: 30% 30% 30%;
 `;
 
-const Item = styled.div``;
+const FirstItem = styled.div`
+  position: relative;
+`;
+const SecondItem = styled.div`
+position: relative;
+`;
+const ThirdItem = styled.div`
+position: relative;
+`;
 
-const Number = styled.div``;
+const Number = styled.div`
+  font-size: 80px;
+  line-height: 35px;
+  opacity: 0.1;
+  margin-top: -30px;
+`;
 
-const Intro = styled.div``;
+const Intro = styled.div`
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 5px;
+`;
+
+const ParagraphText = styled.div`
+  opacity: 0.7;
+  line-height: 20px;
+  letter-spacing: -1px;
+  padding-top: 30px;
+  font-size: 15px;
+`;
 
 export default Main;
