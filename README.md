@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-✨Front-end Developer
+✨Front-end Developer hahmjimin
 
 🌱 Interest & Skills
 - React-lib, Redux-state
