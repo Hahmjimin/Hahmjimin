@@ -11,14 +11,14 @@ import ReactPlayer from "react-player";
 function Main() {
   return (
     <div>
-      <Block>
+      <IntroductionHeader>
         <TitleText>뮤커톤</TitleText>
         <Text>
           세상에 없던 나의 첫 음악<br></br>함께 즐기면서 경험하는 음악 협업
           프로젝트
         </Text>
-      </Block>
-      <div>
+      </IntroductionHeader>
+      <IntroductionText>
         <MainText>What is</MainText>
         <SubText>Mukathon?</SubText>
         <Paragraph>
@@ -31,60 +31,75 @@ function Main() {
           <ReactPlayer
             className="player"
             url={"https://youtu.be/trE4htAzay8"}
-            width={"570px"} 
+            width={"570px"}
             height={"320px"}
             playing={false}
             muted={true}
             controls={true}
           />
         </Video>
-      </div>
-      <div>
-        <Benefit>
-          <FirstText>뮤커톤만의 혜택</FirstText>
-        </Benefit>
-      </div>
-      <div>
-        <Grid>
-          <FirstItem>
-            <Number>01</Number>
-            <Intro>다른 뮤지션과 함께 경험하는<br></br>음악 협업</Intro>
-            <ParagraphText>
-              나와 맞는 뮤지션을 매칭하여 팀을 이룰 수 있습니다.<br></br>팀을 이룬 후
-              협업을 통해 버스킹, 뮤직 mt<br></br>그리고 최종 공연까지 참가 기간 동안
-              <br></br>다양한 음악 활동을 경험할 수 있습니다.
-            </ParagraphText>
-          </FirstItem>
-          <SecondItem>
-            <Number>02</Number>
-            <Intro>음악활동을 도와주는<br></br>든든한 멘토진</Intro>
-            <ParagraphText>
-              맞춤 멘토링부터 공연 음악 편곡, 믹싱까지<br></br>음악전문학원에서 제공하는
-              연습실에서<br></br>소속 멘토 선생님들과 함께 멘토링을 진행하며<br></br>팀이 원하는
-              음악을 만들 수 있도록 도와줍니다.
-            </ParagraphText>
-          </SecondItem>
-          <ThirdItem>
-            <Number>03</Number>
-            <Intro>잊지 못할 추억을<br></br>간직할 수 있는 굿즈까지</Intro>
-            <ParagraphText>
-              녹음한 공연 곡과 공연 영상을 함께 편집한<br></br>영상 앨범부터 뮤커톤 참가
-              기념 굿즈까지<br></br>뮤커톤을 통해 만난 값진 추억을 선물로 드립니다.
-            </ParagraphText>
-          </ThirdItem>
-        </Grid>
-      </div>
+      </IntroductionText>
+      <IntroductionMain>
+        <IntroBenefits>
+          <BenefitsHeader>
+            <FirstText>뮤커톤만의 혜택</FirstText>
+          </BenefitsHeader>
+        </IntroBenefits>
+        <div>
+          <BenefitsDetails>
+            <FirstItem>
+              <Number>01</Number>
+              <Intro>
+                다른 뮤지션과 함께 경험하는<br></br>음악 협업
+              </Intro>
+              <ParagraphText>
+                나와 맞는 뮤지션을 매칭하여 팀을 이룰 수 있습니다.<br></br>팀을
+                이룬 후 협업을 통해 버스킹, 뮤직 mt<br></br>그리고 최종 공연까지
+                참가 기간 동안
+                <br></br>다양한 음악 활동을 경험할 수 있습니다.
+              </ParagraphText>
+            </FirstItem>
+            <SecondItem>
+              <Number>02</Number>
+              <Intro>
+                음악활동을 도와주는<br></br>든든한 멘토진
+              </Intro>
+              <ParagraphText>
+                맞춤 멘토링부터 공연 음악 편곡, 믹싱까지<br></br>
+                음악전문학원에서 제공하는 연습실에서<br></br>소속 멘토
+                선생님들과 함께 멘토링을 진행하며<br></br>팀이 원하는 음악을
+                만들 수 있도록 도와줍니다.
+              </ParagraphText>
+            </SecondItem>
+            <ThirdItem>
+              <Number>03</Number>
+              <Intro>
+                잊지 못할 추억을<br></br>간직할 수 있는 굿즈까지
+              </Intro>
+              <ParagraphText>
+                녹음한 공연 곡과 공연 영상을 함께 편집한<br></br>영상 앨범부터
+                뮤커톤 참가 기념 굿즈까지<br></br>뮤커톤을 통해 만난 값진 추억을
+                선물로 드립니다.
+              </ParagraphText>
+            </ThirdItem>
+          </BenefitsDetails>
+        </div>
+      </IntroductionMain>
     </div>
   );
 }
 
-const Block = styled.main`
+const IntroductionHeader = styled.main`
   width: 100%;
   height: 400px;
   background-image: url(${topImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TitleText = styled.div`
@@ -128,13 +143,33 @@ const Paragraph = styled.div`
   padding-left: 250px;
 `;
 
+const IntroductionText = styled.div`
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    align-content: stretch;
+    padding-bottom: 10%;
+  }
+`;
+
 const Video = styled.div`
   float: right;
   padding-right: 250px;
   margin-top: -270px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    align-content: stretch;
+    padding-bottom: 10%;
+  }
 `;
 
-const Benefit = styled.div`
+const IntroBenefits = styled.div`
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+`;
+
+const BenefitsHeader = styled.div`
   width: 1440px;
   height: 270px;
   display: block;
@@ -152,23 +187,28 @@ const FirstText = styled.div`
   color: white;
   font-size: 30px;
   padding-top: 115px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items:center;
+    margin-left: auto;
+  }
 `;
 
-const Grid = styled.div`
-display: grid;
-padding-top: 10%;
-padding-left: 15%;
-grid-template-columns: 30% 30% 30%;
+const BenefitsDetails = styled.div`
+  display: grid;
+  padding-top: 10%;
+  padding-left: 15%;
+  grid-template-columns: 30% 30% 30%;
 `;
 
 const FirstItem = styled.div`
   position: relative;
 `;
 const SecondItem = styled.div`
-position: relative;
+  position: relative;
 `;
 const ThirdItem = styled.div`
-position: relative;
+  position: relative;
 `;
 
 const Number = styled.div`
@@ -190,6 +230,13 @@ const ParagraphText = styled.div`
   letter-spacing: -1px;
   padding-top: 30px;
   font-size: 15px;
+`;
+
+const IntroductionMain = styled.div`
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
 `;
 
 export default Main;
