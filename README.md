@@ -2,7 +2,7 @@
 
 ✨Front-end Developer
 
-🌱 Interest & Skillsddddd
+🌱 Interest & Skillsdddd
 - React-lib, Redux-state
 - Javascript-language
 - css, Sass, styled-components-style
