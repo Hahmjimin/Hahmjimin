@@ -1,10 +1,10 @@
-### Hi there 👋
+⁷### Hi there 👋
 
 ✨FE Developer
 
 🌱 Interest & Skills
 - React-lib, Redux-state
-- Javascript-languagekk
+- Javascript-language
 - css, Sass, styled-components-style
 
 [![Instagram Badge](https://img.shields.io/badge/-Instagram-dd2a7b?style=flat-square&logo=instagram&logoColor=white&link=https://https://www.instagram.com/hahmji_82/)](https://www.instagram.com/hahmji_82/)
