@@ -1,4 +1,4 @@
-⁷### Hi there 👋
+Hi there 👋
 
 ✨FE Developer
 
