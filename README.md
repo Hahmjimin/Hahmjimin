@@ -1,7 +1,7 @@
 👋 Hi there 👋
 
 ✨FE Developer
-mmmm
+
 🌱 Interest & Skill
 - React-lib, Redux-state
 - Javascript-language, TypeScript
