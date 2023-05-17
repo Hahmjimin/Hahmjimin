@@ -1,6 +1,6 @@
 👋 Hi there 👋
 
-✨FE Developerkkk
+✨FE Developer
 
 🌱 Interest & Skill
 - React-lib, Redux-state
