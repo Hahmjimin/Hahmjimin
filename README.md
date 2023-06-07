@@ -3,7 +3,7 @@
 ✨FE Developer
 
 🌱 Interest & Skill
-- React-lib, Redux-state
+- React-lib, Redux-stateddddd
 - Javascript-language, TypeScript
 - css, Scss, Sass, styled-components
 
